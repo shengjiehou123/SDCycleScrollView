@@ -567,6 +567,11 @@ NSString * const ID = @"SDCycleScrollViewCell";
     long targetIndex = [self currentIndex];
     if (targetIndex < _totalItemsCount) {
         [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    }else{
+        if (self.infiniteLoop) {
+            targetIndex = _totalItemsCount * 0.5;
+            [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        }
     }
 }
 

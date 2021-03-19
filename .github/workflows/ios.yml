@@ -15,6 +15,6 @@ jobs:
       p12-key-base64: ${{ secrets.SIGNING_CERTIFICATE_KEY_P12_DATA }}
       p12-cer-base64: ${{ secrets.SIGNING_CERTIFICATE_P12_DATA }}
       mobileprovision-base64: ${{ secrets.PROVISIONING_PROFILE_DATA }}
-      code-signing-identity: ${{ secrets. }}
+      code-signing-identity: ${{ secrets.IDENTITY}}
       team-id: ${{ secrets.TEAM_ID}}
       workspace-path: SDCycleScrollView.xcworkspace # optional
